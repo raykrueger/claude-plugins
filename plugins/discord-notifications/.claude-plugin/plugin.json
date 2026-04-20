@@ -1,0 +1,8 @@
+{
+  "name": "discord-notifications",
+  "description": "Send Discord notifications from Claude Code via a webhook",
+  "author": {
+    "name": "Ray Krueger",
+    "email": "ray.krueger@spectrocloud.com"
+  }
+}
