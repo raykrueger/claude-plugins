@@ -10,12 +10,17 @@ Personal Claude Code plugin marketplace.
 
 ## Install
 
-Add this marketplace:
-```
-/plugin marketplace add raykrueger/claude-plugins
+### CLI
+
+```bash
+claude plugin marketplace add raykrueger/claude-plugins
+claude plugin install discord-notifications@raykrueger
 ```
 
-Then install a plugin:
+### In-session
+
 ```
+/plugin marketplace add raykrueger/claude-plugins
 /plugin install discord-notifications@raykrueger
+/reload-plugins
 ```

@@ -4,12 +4,22 @@ Claude Code plugin — send Discord notifications via webhook.
 
 ## Installation
 
+### CLI
+
+```bash
+claude plugin marketplace add raykrueger/claude-plugins
+claude plugin install discord-notifications@raykrueger
+```
+
+### In-session
+
 ```
 /plugin marketplace add raykrueger/claude-plugins
 /plugin install discord-notifications@raykrueger
+/reload-plugins
 ```
 
-After installing, run the setup command to configure your webhook:
+After installing, configure your webhook:
 
 ```
 /discord-notifications:setup
@@ -26,24 +36,12 @@ You'll be prompted for your Discord webhook URL. It's saved to `~/.claude/discor
 
 ## Usage
 
-Invoke from Claude Code:
-
 ```
 /notify
 /notify Build complete
 ```
 
 Or tell Claude: "ping me when done", "notify me", "send me a notification".
-
-## Manual setup (optional)
-
-If you prefer, set `DISCORD_WEBHOOK` in your shell profile instead of using the setup command:
-
-```bash
-export DISCORD_WEBHOOK="https://discord.com/api/webhooks/YOUR_WEBHOOK_URL"
-```
-
-The script checks the settings file first, then falls back to the env var.
 
 ## Requirements
 

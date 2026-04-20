@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A personal Claude Code plugin marketplace hosted at `github.com/raykrueger/claude-plugins`. Plugins live under `plugins/<name>/` and are installable via:
 
-```
-/plugin marketplace add raykrueger/claude-plugins
-/plugin install <plugin-name>@raykrueger
+```bash
+claude plugin marketplace add raykrueger/claude-plugins
+claude plugin install <plugin-name>@raykrueger
 ```
 
 ## Plugin structure
@@ -37,7 +37,7 @@ User config stored at `~/.claude/discord-notifications.json` (never in the repo)
 
 ## Git
 
-Never push without explicit user confirmation.
+Never commit or push without explicit user confirmation.
 
 ## Adding a new plugin
 
