@@ -5,7 +5,7 @@ argument-hint: [webhook-url]
 allowed-tools: [Bash, Read, Write]
 ---
 
-Configure the discord-notifications plugin by saving the webhook URL to `~/.claude/discord-notifications.local.md`.
+Configure the discord-notifications plugin by saving the webhook URL to `~/.claude/discord-notifications.json`.
 
 ## Steps
 
@@ -14,12 +14,12 @@ Configure the discord-notifications plugin by saving the webhook URL to `~/.clau
 
 2. Validate the URL starts with `https://discord.com/api/webhooks/`.
 
-3. Write `~/.claude/discord-notifications.local.md`:
+3. Write `~/.claude/discord-notifications.json`:
 
-```markdown
----
-webhook: <url>
----
+```json
+{
+  "webhook": "<url>"
+}
 ```
 
 4. Test the webhook by running:

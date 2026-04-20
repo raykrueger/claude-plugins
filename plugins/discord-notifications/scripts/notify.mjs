@@ -3,23 +3,20 @@ import { readFileSync } from 'fs';
 import { homedir } from 'os';
 import { join } from 'path';
 
-function readWebhookFromSettings() {
-  const settingsPath = join(homedir(), '.claude', 'discord-notifications.local.md');
+function readWebhookFromConfig() {
+  const configPath = join(homedir(), '.claude', 'discord-notifications.json');
   try {
-    const content = readFileSync(settingsPath, 'utf8');
-    const match = content.match(/^---\n([\s\S]*?)\n---/m);
-    if (!match) return null;
-    const webhookLine = match[1].split('\n').find(l => l.startsWith('webhook:'));
-    return webhookLine ? webhookLine.replace(/^webhook:\s*/, '').replace(/^"|"$/g, '') : null;
+    const config = JSON.parse(readFileSync(configPath, 'utf8'));
+    return config.webhook || null;
   } catch {
     return null;
   }
 }
 
-const webhook = process.env.DISCORD_WEBHOOK || readWebhookFromSettings();
+const webhook = readWebhookFromConfig();
 
 if (!webhook) {
-  console.error('ERROR: No webhook configured. Run /discord-notifications:setup or set DISCORD_WEBHOOK.');
+  console.error('ERROR: No webhook configured. Run /discord-notifications:setup.');
   process.exit(1);
 }
 
