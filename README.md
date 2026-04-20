@@ -1,16 +1,16 @@
 # raykrueger/claude-plugins
 
-Personal Claude Code plugin marketplace.
+Personal [Claude Code](https://claude.ai/code) plugin marketplace.
 
 ## Add this marketplace
 
-### CLI
+**CLI (outside a session):**
 
 ```bash
 claude plugin marketplace add raykrueger/claude-plugins
 ```
 
-### In-session
+**In-session:**
 
 ```
 /plugin marketplace add raykrueger/claude-plugins
@@ -20,23 +20,31 @@ claude plugin marketplace add raykrueger/claude-plugins
 
 ## Plugins
 
-### discord-notifications
+| Plugin | Description | Install |
+|--------|-------------|---------|
+| [discord-notifications](plugins/discord-notifications/README.md) | Send Discord notifications from Claude Code via webhook | `claude plugin install discord-notifications@raykrueger` |
 
-Send Discord notifications from Claude Code via webhook.
+### Quick install: discord-notifications
+
+**CLI:**
 
 ```bash
+claude plugin marketplace add raykrueger/claude-plugins
 claude plugin install discord-notifications@raykrueger
 ```
 
+**In-session:**
+
 ```
+/plugin marketplace add raykrueger/claude-plugins
 /plugin install discord-notifications@raykrueger
 /reload-plugins
 ```
 
-After installing, configure your webhook:
+Then run `/discord-notifications:setup` to save your webhook URL.
 
-```
-/discord-notifications:setup
-```
+---
 
-[Full documentation](plugins/discord-notifications/README.md)
+## Adding a new plugin
+
+See [CLAUDE.md](CLAUDE.md) for plugin structure and contribution guidelines.
