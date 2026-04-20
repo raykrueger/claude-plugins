@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "raykrueger-claude-plugins",
+  "description": "Personal Claude Code plugin marketplace",
+  "owner": {
+    "name": "Ray Krueger",
+    "email": "ray.krueger@spectrocloud.com"
+  },
+  "plugins": [
+    {
+      "name": "discord-notifications",
+      "description": "Send Discord notifications from Claude Code via a webhook",
+      "source": "./plugins/discord-notifications",
+      "category": "productivity",
+      "homepage": "https://github.com/raykrueger/claude-plugins/tree/main/plugins/discord-notifications"
+    }
+  ]
+}
