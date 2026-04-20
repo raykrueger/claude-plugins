@@ -15,7 +15,7 @@ A personal Claude Code plugin marketplace hosted at `github.com/raykrueger/claud
 
 Each plugin under `plugins/` must have:
 - `.claude-plugin/plugin.json` — name, description, author metadata
-- `skills/<skill-name>/SKILL.md` — user-invoked commands (`/plugin-name:skill-name`) or model-invoked skills
+- `commands/<name>.md` — user-invoked slash commands (`/plugin-name:name`); use this format for typeahead to work
 - `scripts/` — supporting scripts called from skills via `${CLAUDE_PLUGIN_ROOT}/scripts/`
 
 Skills reference scripts using `${CLAUDE_PLUGIN_ROOT}` so paths resolve correctly after install.
