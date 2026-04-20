@@ -3,26 +3,26 @@ import { readFileSync } from 'fs';
 import { homedir } from 'os';
 import { join } from 'path';
 
-function readWebhookFromConfig() {
-  const configPath = join(homedir(), '.claude', 'discord-notifications.json');
+function readConfig(path) {
   try {
-    const config = JSON.parse(readFileSync(configPath, 'utf8'));
-    return config.webhook || null;
+    return JSON.parse(readFileSync(path, 'utf8'));
   } catch {
     return null;
   }
 }
 
-const webhook = readWebhookFromConfig();
+const config =
+  readConfig(join(process.cwd(), '.claude', 'discord-notifications.json')) ||
+  readConfig(join(homedir(), '.claude', 'discord-notifications.json'));
 
-if (!webhook) {
+if (!config?.webhook) {
   console.error('ERROR: No webhook configured. Run /discord-notifications:setup.');
   process.exit(1);
 }
 
 const message = process.argv.slice(2).join(' ') || 'Done';
 
-const res = await fetch(webhook, {
+const res = await fetch(config.webhook, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ content: message }),

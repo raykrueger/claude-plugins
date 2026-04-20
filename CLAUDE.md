@@ -35,6 +35,10 @@ User config stored at `~/.claude/discord-notifications.json` (never in the repo)
 }
 ```
 
+## Git
+
+Never push without explicit user confirmation.
+
 ## Adding a new plugin
 
 1. Create `plugins/<name>/` with the structure above
