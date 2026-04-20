@@ -17,5 +17,5 @@ Add this marketplace:
 
 Then install a plugin:
 ```
-/plugin install discord-notifications@raykrueger-claude-plugins
+/plugin install discord-notifications@raykrueger
 ```

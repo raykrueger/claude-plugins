@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "raykrueger-claude-plugins",
+  "name": "raykrueger",
   "description": "Personal Claude Code plugin marketplace",
   "owner": {
     "name": "Ray Krueger",

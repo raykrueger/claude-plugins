@@ -6,7 +6,7 @@ Claude Code plugin — send Discord notifications via webhook.
 
 ```
 /plugin marketplace add raykrueger/claude-plugins
-/plugin install discord-notifications@raykrueger-claude-plugins
+/plugin install discord-notifications@raykrueger
 ```
 
 After installing, run the setup command to configure your webhook:

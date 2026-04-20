@@ -8,7 +8,7 @@ A personal Claude Code plugin marketplace hosted at `github.com/raykrueger/claud
 
 ```
 /plugin marketplace add raykrueger/claude-plugins
-/plugin install <plugin-name>@raykrueger-claude-plugins
+/plugin install <plugin-name>@raykrueger
 ```
 
 ## Plugin structure
