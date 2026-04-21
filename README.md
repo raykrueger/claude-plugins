@@ -23,6 +23,7 @@ claude plugin marketplace add raykrueger/claude-plugins
 | Plugin | Description | Install |
 |--------|-------------|---------|
 | [discord-notifications](plugins/discord-notifications/README.md) | Send Discord notifications from Claude Code via webhook | `claude plugin install discord-notifications@raykrueger` |
+| [pushover-notifications](plugins/pushover-notifications/README.md) | Send Pushover notifications from Claude Code | `claude plugin install pushover-notifications@raykrueger` |
 
 ### Quick install: discord-notifications
 
@@ -42,6 +43,25 @@ claude plugin install discord-notifications@raykrueger
 ```
 
 Then run `/discord-notifications:setup` to save your webhook URL.
+
+### Quick install: pushover-notifications
+
+**CLI:**
+
+```bash
+claude plugin marketplace add raykrueger/claude-plugins
+claude plugin install pushover-notifications@raykrueger
+```
+
+**In-session:**
+
+```
+/plugin marketplace add raykrueger/claude-plugins
+/plugin install pushover-notifications@raykrueger
+/reload-plugins
+```
+
+Then run `/pushover-notifications:setup` to save your app token and user key.
 
 ---
 

@@ -22,9 +22,9 @@ Skills reference scripts using `${CLAUDE_PLUGIN_ROOT}` so paths resolve correctl
 
 ## discord-notifications plugin
 
-Two skills:
-- `skills/notify/SKILL.md` — `/notify` command; calls `node ${CLAUDE_PLUGIN_ROOT}/scripts/notify.mjs "<message>"`
-- `skills/setup/SKILL.md` — `/discord-notifications:setup` command; prompts for webhook URL, writes `~/.claude/discord-notifications.json`
+Two commands:
+- `commands/notify.md` — `/notify` command; calls `node ${CLAUDE_PLUGIN_ROOT}/scripts/notify.mjs "<message>"`
+- `commands/setup.md` — `/discord-notifications:setup` command; prompts for webhook URL, writes `~/.claude/discord-notifications.json`
 
 `scripts/notify.mjs` reads the webhook from `~/.claude/discord-notifications.json`. Uses Node.js built-in `fetch` — no npm dependencies.
 

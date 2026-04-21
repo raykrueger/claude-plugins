@@ -1,0 +1,8 @@
+{
+  "name": "pushover-notifications",
+  "description": "Send Pushover notifications from Claude Code",
+  "author": {
+    "name": "Ray Krueger",
+    "email": "raykrueger@gmail.com"
+  }
+}

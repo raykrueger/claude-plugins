@@ -13,6 +13,13 @@
       "source": "./plugins/discord-notifications",
       "category": "productivity",
       "homepage": "https://github.com/raykrueger/claude-plugins/tree/main/plugins/discord-notifications"
+    },
+    {
+      "name": "pushover-notifications",
+      "description": "Send Pushover notifications from Claude Code",
+      "source": "./plugins/pushover-notifications",
+      "category": "productivity",
+      "homepage": "https://github.com/raykrueger/claude-plugins/tree/main/plugins/pushover-notifications"
     }
   ]
 }
