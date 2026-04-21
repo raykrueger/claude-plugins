@@ -15,16 +15,16 @@ claude plugin install <plugin-name>@raykrueger
 
 Each plugin under `plugins/` must have:
 - `.claude-plugin/plugin.json` — name, description, author metadata
-- `commands/<name>.md` — user-invoked slash commands (`/plugin-name:name`); use this format for typeahead to work
+- `skills/<name>/SKILL.md` — user-invoked slash commands (`/plugin-name:name`); use this format for typeahead to work
 - `scripts/` — supporting scripts called from skills via `${CLAUDE_PLUGIN_ROOT}/scripts/`
 
 Skills reference scripts using `${CLAUDE_PLUGIN_ROOT}` so paths resolve correctly after install.
 
 ## discord-notifications plugin
 
-Two commands:
-- `commands/notify.md` — `/notify` command; calls `node ${CLAUDE_PLUGIN_ROOT}/scripts/notify.mjs "<message>"`
-- `commands/setup.md` — `/discord-notifications:setup` command; prompts for webhook URL, writes `~/.claude/discord-notifications.json`
+Two skills:
+- `skills/notify/SKILL.md` — `/notify` command; calls `node ${CLAUDE_PLUGIN_ROOT}/scripts/notify.mjs "<message>"`
+- `skills/setup/SKILL.md` — `/discord-notifications:setup` command; prompts for webhook URL, writes `~/.claude/discord-notifications.json`
 
 `scripts/notify.mjs` reads the webhook from `~/.claude/discord-notifications.json`. Uses Node.js built-in `fetch` — no npm dependencies.
 
