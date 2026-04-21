@@ -15,15 +15,11 @@ By default, write to the user-level config unless the user asks for project-spec
 
 ## Steps
 
-1. Ask the user for their Pushover app API token:
-   > What is your Pushover application API token?
-   
-   (They can find this at pushover.net under **Your Applications**. If they don't have an app, they need to create one.)
+1. Ask the user for their Pushover user key:
+   > What is your Pushover user key? (Found at the top of your pushover.net dashboard.)
 
-2. Ask the user for their Pushover user key:
-   > What is your Pushover user key?
-   
-   (Found at the top of their pushover.net dashboard.)
+2. Ask the user for their Pushover app API token:
+   > What is your Pushover application API token? (Found at pushover.net under **Your Applications** — create one there if you don't have it yet.)
 
 3. Write to the appropriate config file:
 
