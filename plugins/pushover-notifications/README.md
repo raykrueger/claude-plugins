@@ -44,15 +44,18 @@ For project-specific config instead of user-level, ask Claude to save to project
 
 ### Getting your Pushover credentials
 
-**App API token:**
+Pushover requires two credentials: an **app API token** (identifies the sending application) and a **user key** (identifies who receives notifications). You need both.
+
+**Step 1 — Create an application to get your API token:**
 1. Log in at [pushover.net](https://pushover.net).
 2. Scroll to **Your Applications** and click **Create an Application/API Token**.
-3. Give it a name (e.g. "Claude Code") and click **Create Application**.
-4. Copy the **API Token/Key**.
+3. Fill in a name (e.g. "Claude Code") and any description. Type can be left as "Application".
+4. Agree to the terms and click **Create Application**.
+5. Copy the **API Token/Key** shown on the next page.
 
-**User key:**
+**Step 2 — Find your user key:**
 1. Log in at [pushover.net](https://pushover.net).
-2. Your user key is shown at the top of the dashboard under your name.
+2. Your user key is shown at the top of the dashboard, labeled **Your User Key**, directly under your name.
 
 ## Usage
 
